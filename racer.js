@@ -12,22 +12,26 @@ $(document).ready( function() {
     // $('nextCell')( 'td.active' )
 
     $(document).on('keyup', function(e) {
-        console.log(e)
+
+        function movePlayer(id) {
+
+            var currentCell = $('#player' + id + '_strip td.active');
+            var nextCell = currentCell.next();
+
+              nextCell.addClass("active");
+              currentCell.removeClass("active");
+
+              }
+
         if (e.which === 65) {
 
-        var currentCell = $('#player1_strip td.active');
-        var nextCell = currentCell.next();
-        nextCell.addClass("active");
-        currentCell.removeClass("active");
+          movePlayer(1)
 
         }   else if (e.which === 76) {
 
-            var currentCell = $('#player2_strip td.active');
-            var nextCell = currentCell.next();
-            nextCell.addClass("active");
-            currentCell.removeClass("active");
-            }
+          movePlayer(2);
 
+        }
     });
 
 });
