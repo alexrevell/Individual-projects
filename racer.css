@@ -1,0 +1,22 @@
+
+
+.container {
+  background-color: lightblue;
+  padding: 40px
+}
+
+.racer_table {
+  border: white;
+  color: white;
+}
+
+.racer_table td {
+  background-color: lightgrey;
+  height: 20px;
+  width: 20px;
+}
+
+.racer_table td.active {
+  background-color: black;
+}
+
